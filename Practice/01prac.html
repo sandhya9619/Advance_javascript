@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Use Strict</title>
+            </head>
+      <body>
+        <h1>“use strict”</h1>
+    
+        <script>
+          'use strict'
+
+            // a = 10;
+            // console.log(a);
+    
+          // "use strict";
+    
+          var a = 10;
+
+          console.log(a); // ReferenceError: a is not defined
+    
+           a = 30;
+          console.log(a); // ReferenceError: a is not defined
+
+          // “use strict”
+    
+          // The directive looks like a string: "use strict" or 'use strict'.
+          // When it is located at the top of a script, the whole script works the “modern” way.
+        </script>
+      </body>
+    </html> 
