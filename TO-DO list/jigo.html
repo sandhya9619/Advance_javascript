@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jiga's majur</title>
+</head>
+<body>
+    <input type="text" id="name" ><button id="add" onclick="majur()">ADD</button>
+    <div id="hi"></div>
+    <script>
+        var inp=document.getElementById('name')
+        var note=document.getElementById('hi')
+        var data=[]
+        function majur(){
+          if(inp.value!=""){
+            data.push(inp.value)
+          
+          }
+           let newdata= ""
+           
+           for (let i=0;i<=data.length;i++){
+             newdata += `<div>${data[i]}</div>`
+          }
+          
+          console.log(data[1])
+          note.innerHTML=newdata
+          
+        }
+       
+            
+        
+
+       
+    </script>
+</body>
+</html>

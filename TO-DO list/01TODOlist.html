@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO list</title>
+    <style>
+        #h1-tag {
+            /* height: 200px; */
+            /* width: 200px; */
+            /* border: 1px solid black; */
+        }
+
+        button {
+            height: 20px;
+            width: 70px;
+        }
+
+        .div {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="madha" type="text" value="">
+    <button onclick="changeme()">click me</button>
+    <button onclick="deleteme()">delete </button>
+
+<div class="container" id="container"></div>
+    <!-- <div id="div">
+        <h1 id="h1-tag">TO-DO list is here</h1>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        function changeme() {
+            //create an node
+
+            const sandhya = document.getElementById("madha")
+            const node = document.createElement("h1");
+
+            //create a text node
+
+            const textnode = document.createTextNode("TO-DO list is here");
+
+            // const textnode = document.createTextNode(`<div id="div">
+            //                                               <h1 id="h1-tag">TO-DO list is here</h1>
+            //                                            </div>`)
+
+            // const textnode = document.createTextNode(`sandhya.value`);
+            // const textnode = document.createTextNode(text);
+
+
+
+            // append the textnode to the h1 node
+            node.appendChild(textnode);
+
+            // append the h1 node to the textnode
+            document.getElementById("container").appendChild(node);
+
+        }
+
+        function deleteme() {
+            //create an node
+
+            const node = document.createElement("h1");
+
+            //create a text node
+
+            const textnode = document.createTextNode("TO-DO list is here");
+
+            // append the textnode to the h1 node
+            node.remove(textnode);
+
+            // append the h1 node to the textnode
+            document.getElementById("container").remove(node);
+
+        }
+
+
+
+
+
+
+
+        // let a = document.getElementById("madha");
+        // console.log(typeof a);
+        // console.log(a)
+
+        // let b = document.getElementById("button")
+        // console.log(b);
+        // console.log(typeof b);
+
+        // // let b = document.getElementById("button").value;
+        // let c = document.getElementById("h1-tag").value;
+        // console.log(c)
+        // console.log(typeof c)
+
+
+
+        // function changeme() {
+
+        //     c.innerhtml = (a.value);
+
+        // }
+
+
+    </script>
+</body>
+
+</html>
