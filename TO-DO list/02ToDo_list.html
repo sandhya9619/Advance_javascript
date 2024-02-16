@@ -8,16 +8,15 @@
     <style>
         * {
             background-color: rgb(255, 249, 241);
-            /* background: linear-gradient(pink,blue,white); */
 
         }
 
         .container {
-            /* background: linear-gradient(rgba(255, 192, 203, 0.189),rgb(96, 96, 214),white); */
+            background: linear-gradient(rgba(255, 192, 203, 0.189), rgb(202, 79, 240), white);
 
-            width: 450px;
+            width: 700px;
             height: 400px;
-            max-width: 600px;
+            /* max-width: 600px; */
             margin: 0 auto;
             margin-top: 50px;
             text-align: center;
@@ -26,17 +25,16 @@
         }
 
         input {
-            width: 270px;
+            width: 200px;
             border: 2px solid black;
             padding: 10px;
         }
 
         button {
             border: 2px solid black;
-
             width: 80px;
             height: 38px;
-            margin: 20px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -46,19 +44,48 @@
         <h1>To-Do list</h1>
 
         <div class="inputs">
-            <input type="text" placeholder="enter your taxt" id="xyz">
+            <input type="text" placeholder="Enter your text" id="xyz">
             <button onclick="Add()">add</button>
+            <!-- <button onclick="deleteme()">delete</button> -->
         </div>
 
-        <div class="text">
+        <div id="text">
 
         </div>
     </div>
-    <!-- <script src="ToDo.js"></script> -->
-    <input type="checkbox"><input type="text" value="${xyzdata.value}"><button>add</button><button>remove</button>
+    <!-- <input type="checkbox"><input type="text" value="${xyzdata.value}"><button>add</button><button>remove</button> -->
 
     <script>
-        // let input = document.getElementById("inp");
+
+
+        function Add() {
+            let inpvalue = document.getElementById("xyz");
+            let node = document.createElement("div");
+            let newdata = `<input type="checkbox"> <input type="" value="${inpvalue.value}"><button>add</button><button>remove</button>`;
+            let textnode = document.createTextNode(newdata);
+            node.appendChild(textnode);
+            document.getElementById("text").appendChild(node);
+            // node.innerHTML=textnode
+            node.innerHTML=newdata
+
+            textnode.appendChild(newdata)
+            // console.log(textnode);
+
+        }
+        // function deleteme() {
+        //     let inpvalue = document.getElementById("xyz");
+        //     let node = document.createElement("div");
+        //     let newdata = `<input type="checkbox"> <input type="" value="${inpvalue.value}"><button>add</button><button>remove</button>`
+        //     let textnode = document.createTextNode(newdata);
+        //     node.appendChild(textnode);
+        //     document.getElementById("text").remove(node);
+        //     // node.innerHTML=textnode
+        //     node.innerHTML=newdata
+
+        //     textnode.remove(newdata)
+        //     // console.log(textnode);
+
+        // }
 
     </script>
 

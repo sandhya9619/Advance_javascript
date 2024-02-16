@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Append Child</title>
+  </head>
+  <body>
+    <h1 id="Hworld">Hello world</h1>
+    <button onclick="add()" id="btn">Click</button>
+    <div class="container" id="container">
+
+    </div>
+    <script>
+      function add() {
+            let node = document.createElement("p");
+            let textnode = document.createTextNode("how are you...?");
+            node.appendChild(textnode);
+            document.getElementById("container").appendChild(node);
+        }
+       
+    </script>
+  </body>
+</html>
