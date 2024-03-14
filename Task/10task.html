@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area, diameter, or circumference</title>
+</head>
+<h1>Area of Circle, Diameter of Circle, Circumference of Circle.</h1>
+
+<body>
+    <script>
+
+        arr = [2, 4, 6, 8]
+   
+
+        // area of circle = pai* r*r
+        for (let i = 0; i < arr.length; i++) {
+
+            console.log(arr[i]*arr[i]*3.14);
+            document.write("area of circle - ",arr[i]," is ", arr[i]*arr[i]*3.14 );
+            document.write("<br>" );
+        }
+
+        // diameter of circle = pai * r
+        for (let j = 0; j < arr.length; j++) {
+
+            console.log(arr[j]*22/7 );
+            document.write("Dimeter of circle - ",arr[j]," is ", arr[j]*22/7 );
+            document.write("<br>" );
+  
+        }
+        
+        
+        //circumference of circle = 2 * pai * r
+        for (let k = 0; k < arr.length; k++) {
+
+            console.log(arr[k]*2*22/7 );
+            document.write("Circumference of circle - ",arr[k]," is ", arr[k]*2*22/7 );
+            document.write("<br>" );
+            
+        }
+
+    </script>
+</body>
+
+</html>
